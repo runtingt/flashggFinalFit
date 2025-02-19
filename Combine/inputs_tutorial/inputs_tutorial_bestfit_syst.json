@@ -4,5 +4,19 @@
         "fits":"bestfit:syst:r",
         "points":"1",
         "fit_opts":"--saveWorkspace --setParameterRanges r=0,2 --saveSpecifiedNuis all --freezeParameters MH"
+    },
+
+    "mu":{
+        "pois":"r",
+        "fits":["bestfit:syst:r1","bestfit:syst:r1"],
+        "points":"1",
+        "fit_opts":"--saveWorkspace --setParameterRanges r=0,2 --saveSpecifiedNuis all --freezeParameters MH"
+    },
+
+    "mu_STXS0":{
+        "pois":"r_ggH,r_ttH,r_tH,r_VBF,r_WHl,r_ZHl",
+        "fits":"profile1D:syst:r_ggH,r_ttH,r_tH,r_VBF,r_WHl,r_ZHl",
+        "points":"400:40",
+        "fit_opts":"--saveInactivePOI 1 --setParameterRanges r_ggH=0,3:r_ttH=0,3:r_tH=0,3:r_VBF=0,3:r_WHl=0,3:r_ZHl=0,3 --saveSpecifiedNuis all --freezeParameters MH"
     }
 }

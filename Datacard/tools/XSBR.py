@@ -28,6 +28,14 @@ XSBRMap['tutorial']['decay'] = {'mode':'hgg'}
 XSBRMap['tutorial']['GG2H'] = {'mode':'constant', 'factor':51.96}
 XSBRMap['tutorial']['VBF'] = {'mode':'constant', 'factor':4.067}
 
+XSBRMap['Run3STXS'] = od()
+XSBRMap['Run3STXS']['decay'] = {'mode':'hgg'}
+XSBRMap['Run3STXS']['gghtruth'] = {'mode':'constant', 'factor':52.23}
+XSBRMap['Run3STXS']['tthtruth'] = {'mode':'constant', 'factor':0.5700}
+XSBRMap['Run3STXS']['thtruth'] = {'mode':'constant', 'factor':0.104}
+XSBRMap['Run3STXS']['whltruth'] = {'mode':'constant', 'factor':1.4564}
+XSBRMap['Run3STXS']['zhltruth'] = {'mode':'constant', 'factor':0.94388}
+XSBRMap['Run3STXS']['vbfVhqtruth'] = {'mode':'constant', 'factor':4.078}
 # STXS analysis
 XSBRMap['STXS'] = od()
 XSBRMap['STXS']['decay'] = {'mode':'hgg'}
@@ -204,6 +212,10 @@ def extractXSBR(d,mass='125',analysis='STXS'):
   XSBR_for_analysis = od()
   # XS
   for proc in d[d['type']=='sig']['procOriginal'].unique():
+    print(proc)
+    print(analysis)
+    print(XSBRMap[analysis])
+    print(XSBRMap[analysis][proc])
     fp = XSBRMap[analysis][proc]['factor'] if 'factor' in XSBRMap[analysis][proc] else 1.
     mode = XSBRMap[analysis][proc]['mode']
     xs = fp*xsbr[mode]

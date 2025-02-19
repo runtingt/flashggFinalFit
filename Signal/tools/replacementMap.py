@@ -23,6 +23,28 @@ globalReplacementMap["example"]["catRVMap"] = od()
 globalReplacementMap["example"]["catRVMap"]["Untagged_Tag0"] = "Untagged_Tag0"
 globalReplacementMap["example"]["catRVMap"]["VBF_Tag0"] = "VBF_Tag0"
 
+
+globalReplacementMap["Run3STXS"]=od()
+globalReplacementMap["Run3STXS"]["procWV"]= "gghtruth"
+globalReplacementMap["Run3STXS"]["catWV"]= "GGH_RECO"
+
+globalReplacementMap["Run3STXS"]["procRVMap"]=od()
+globalReplacementMap["Run3STXS"]["procRVMap"]["TTH_RECO"]= "gghtruth"
+globalReplacementMap["Run3STXS"]["procRVMap"]["GGH_RECO"]= "gghtruth"
+globalReplacementMap["Run3STXS"]["procRVMap"]["TH_RECO"]= "gghtruth"
+globalReplacementMap["Run3STXS"]["procRVMap"]["VBF_VHQ_RECO"]= "gghtruth"
+globalReplacementMap["Run3STXS"]["procRVMap"]["WHleptonic_RECO"]= "gghtruth"
+globalReplacementMap["Run3STXS"]["procRVMap"]["ZHleptonic_RECO"]= "gghtruth"
+
+globalReplacementMap["Run3STXS"]["catRVMap"]=od()
+globalReplacementMap["Run3STXS"]["catRVMap"]["TTH_RECO"]= "GGH_RECO"
+globalReplacementMap["Run3STXS"]["catRVMap"]["GGH_RECO"]= "GGH_RECO"
+globalReplacementMap["Run3STXS"]["catRVMap"]["TH_RECO"]= "GGH_RECO"
+globalReplacementMap["Run3STXS"]["catRVMap"]["VBF_VHQ_RECO"]= "GGH_RECO"
+globalReplacementMap["Run3STXS"]["catRVMap"]["WHleptonic_RECO"]= "GGH_RECO"
+globalReplacementMap["Run3STXS"]["catRVMap"]["ZHleptonic_RECO"]= "GGH_RECO"
+
+
 # Tutorial analysis
 globalReplacementMap['tutorial'] = od()
 # For WRONG VERTEX SCENARIO:
