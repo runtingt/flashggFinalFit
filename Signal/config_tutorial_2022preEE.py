@@ -5,7 +5,7 @@ _year = '2022preEE'
 signalScriptCfg = {
   
   # Setup
-  'inputWSDir':'PATH_TO_INPUTS/workspaces/signal_%s'%_year,
+  'inputWSDir':'/home/tr1123/Downloads/workspaces/signal_2022preEE',
   'procs':'auto', # if auto: inferred automatically from filenames
   'cats':'auto', # if auto: inferred automatically from (0) workspace
   'ext':'tutorial_%s'%_year,

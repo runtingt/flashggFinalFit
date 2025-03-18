@@ -3,7 +3,7 @@
 backgroundScriptCfg = {
   
   # Setup
-  'inputWS':'PATH_TO_INPUTS/workspaces/data/allData_2022preEE.root', # location of 'allData.root' file
+  'inputWS':'/home/tr1123/Downloads/workspaces/data/allData_2022preEE.root', # location of 'allData.root' file
   'cats':'auto', # auto: automatically inferred from input ws
   'catOffset':0, # add offset to category numbers (useful for categories from different allData.root files)  
   'ext':'tutorial', # extension to add to output directory

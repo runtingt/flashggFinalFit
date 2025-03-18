@@ -21,17 +21,23 @@ USERLIBS += -L$(BOOST_PATH)/libs/ -lboost_regex -lboost_program_options
 endif
 ifeq ($(UNAME),Linux)
 $(info Found OS Linux - using linux build)
-BOOST_PATH=$(shell scram tool info boost | awk -F= '/BOOST_BASE/ {  print $$2  }')
+# BOOST_PATH=$(shell scram tool info boost | awk -F= '/BOOST_BASE/ {  print $$2  }')
+# THIS IS A HACK TO GET AROUND THE BOOST PATH NOT BEING SET
+BOOST_PATH=/cvmfs/cms.cern.ch/el9_amd64_gcc12/external/boost/1.80.0-d43be26d8a1ca943bd8818c606afcd2b
+
 USERINCLUDES += -I$(BOOST_PATH)/include/
-USERINCLUDES += -I $(CMSSW_BASE)/src/ -I $(CMSSW_RELEASE_BASE)/src/
+# USERINCLUDES += -I $(CMSSW_BASE)/src/ -I $(CMSSW_RELEASE_BASE)/src/
+USERINCLUDES += -I $(CMSSW_BASE)/src/
 USERLIBS += -L$(BOOST_PATH)/lib/ -lboost_regex -lboost_program_options 
-USERINCLUDES += -I$(ROOFITSYS)/include
-USERLIBS += -L$(ROOFITSYS)/lib -lRooFit -lRooFitCore -lRooStats
+# USERINCLUDES += -I$(ROOFITSYS)/include
+# USERLIBS += -L$(ROOFITSYS)/lib -lRooFit -lRooFitCore -lRooStats
+USERLIBS += -lRooFit -lRooFitCore -lRooStats
 USERLIBS += -L$(CMSSW_BASE)/lib 
 endif
 
 USERLIBS += $(shell root-config --glibs) -lTMVA -lMinuit -lFoam -lRooFit -lRooFitCore -lMathMore -lRooStats 
-CXXFLAGS = -Wall -g -Wl,-rpath=$(BASEDIR)/lib  -std=c++17
+# CXXFLAGS = -Wall -g -Wl,-rpath=$(BASEDIR)/lib  -std=c++17
+CXXFLAGS = -Wall -g -Wl,-rpath=$(BASEDIR)/lib  -std=c++20
 LDFLAGS = -shared -W 
 
 CXX=g++
