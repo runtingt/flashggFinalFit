@@ -34,12 +34,15 @@ globalXSBRMap['example']['THW'] = {'mode':'tHW'}
 
 globalXSBRMap['Run3STXS'] = od()
 globalXSBRMap['Run3STXS']['decay'] = {'mode':'hgg'}
-globalXSBRMap['Run3STXS']['gghtruth'] = {'mode':'constant', 'factor':52.23}
-globalXSBRMap['Run3STXS']['tthtruth'] = {'mode':'constant', 'factor':0.5700}
-globalXSBRMap['Run3STXS']['thtruth'] = {'mode':'constant', 'factor':0.104}
-globalXSBRMap['Run3STXS']['whltruth'] = {'mode':'constant', 'factor':1.4564}
-globalXSBRMap['Run3STXS']['zhltruth'] = {'mode':'constant', 'factor':0.94388}
-globalXSBRMap['Run3STXS']['vbfVhqtruth'] = {'mode':'constant', 'factor':4.078}
+globalXSBRMap['Run3STXS']['gghtruth'] = {'mode':'constant', 'factor':52.277759999999994}
+globalXSBRMap['Run3STXS']['tthtruth'] = {'mode':'constant', 'factor':0.57}
+globalXSBRMap['Run3STXS']['thtruth'] = {'mode':'constant', 'factor':0.10388800000000001}
+globalXSBRMap['Run3STXS']['whltruth'] = {'mode':'constant', 'factor':0.47456028}
+globalXSBRMap['Run3STXS']['zhltruth'] = {'mode':'constant', 'factor':0.2840093586}
+globalXSBRMap['Run3STXS']['vbftruth'] = {'mode':'constant', 'factor':4.078}
+globalXSBRMap['Run3STXS']['vhqtruth'] = {'mode':'constant', 'factor':1.64177455}
+globalXSBRMap['Run3STXS']['bbhtruth'] = {'mode':'constant', 'factor':0.5266}
+globalXSBRMap['Run3STXS']['ggzhtruth'] = {'mode':'constant', 'factor':0.020347999999999998}
 
 globalXSBRMap['tutorial'] = od()
 globalXSBRMap['tutorial']['decay'] = {'mode':'hgg'}

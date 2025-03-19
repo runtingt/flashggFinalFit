@@ -5,7 +5,7 @@ _year = '2022preEE'
 signalScriptCfg = {
   
   # Setup
-  'inputWSDir':'/eos/user/p/pkrueper/HiggsDNA_and_FinalFits_tutorial24/higgsdna_finalfits_tutorial_24/07_FinalFits/CMSSW_14_1_0_pre4/src/flashggFinalFit/Workspaces/signal_%s/'%_year,
+  'inputWSDir':'/eos/user/p/pkrueper/HiggsDNA_and_FinalFits_tutorial24/higgsdna_finalfits_tutorial_24/07_FinalFits/CMSSW_14_1_0_pre4/src/flashggFinalFit/Workspaces_11march/signal_2022preEE',
   'procs':'auto', # if auto: inferred automatically from filenames
   'cats':'auto', # if auto: inferred automatically from (0) workspace
   'ext':'tutorial_%s'%_year,

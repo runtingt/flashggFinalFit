@@ -1,9 +1,9 @@
 {
     "mu_inclusive":{
         "pois":"r",
-        "fits":"profile1D:syst:r",
+        "fits":"profile1D:statonly:r",
         "points":"20:10",
-        "fit_opts":"--setParameterRanges r=0,2 --saveSpecifiedNuis all --freezeParameters MH"
+        "fit_opts":"--setParameterRanges r=0,2 --saveSpecifiedNuis all --freezeParameters MH,alpha,beta,gamma,delta,epsilon,w,jotta,kappa,lambda,omega "
     },
 
     "mu_ggH_VBF":{

@@ -2,12 +2,14 @@ models = {
   "mu_inclusive":"",
 
   "mu_STXS0":"-P HiggsAnalysis.CombinedLimit.PhysicsModel:multiSignalModel \
---PO \"map=.*/ggH.*:r_ggH[1,0,3]\" \
---PO \"map=.*/ttH.*:r_ttH[1,0,3]\" \
---PO \"map=.*/tH.*:r_tH[1,0,3]\" \
---PO \"map=.*/VBF.*:r_VBF[1,0,3]\" \
---PO \"map=.*/WHl.*:r_WHl[1,0,3]\" \
---PO \"map=.*/ZHl.*:r_ZHl[1,0,5]\"",
+--PO \"map=.*/gghtruth.*:r_gghtruth[1,0,3]\" --PO \"map=.*/tthtruth.*:r_tthtruth[1,0,3]\" --PO \"map=.*/thtruth.*:r_thtruth[1,0,3]\" --PO \"map=.*/whltruth.*:r_whltruth[1,0,3]\" --PO \"map=.*/zhltruth.*:r_zhltruth[1,0,3]\" --PO \"map=.*/vbftruth.*:r_vbftruth[1,0,3]\" --PO \"map=.*/vhqtruth.*:r_vbftruth[1,0,3]\" --PO \"map=.*/ggzhtruth.*:r_zhltruth[1,0,3]\" --PO \"map=.*/bbhtruth.*:r_gghtruth[1,0,3]\"",
+  
+  "mu_gghtruth":"-P HiggsAnalysis.CombinedLimit.PhysicsModel:multiSignalModel \
+--PO \"map=.*/gghtruth.*:r_gghtruth[1,0,3]\"",
+
+  "mu_vbfvhqtruth":"-P HiggsAnalysis.CombinedLimit.PhysicsModel:multiSignalModel \
+--PO \"map=.*/vbfvhqtruth.*:r_vbfvhqtruth[1,0,3]\"",
+
 
 "mu_S":"-P HiggsAnalysis.CombinedLimit.PhysicsModel:multiSignalModel \
 --PO \"map=.*/ggH.*:r_ggH[1,0,3]\" \
@@ -28,20 +30,9 @@ models = {
 --PO \"map=.*/tHq.*:r_top[1,0,3]\" \
 --PO \"map=.*/tHW.*:r_top[1,0,3]\"",
 
-  "stage0":"-P HiggsAnalysis.CombinedLimit.PhysicsModel:multiSignalModel \
---PO \"map=.*/ggH.*:r_ggH[1,0,2]\" \
---PO \"map=.*/bbH.*:r_ggH[1,0,2]\" \
---PO \"map=.*/qqH.*:r_qqH[1,0,3]\" \
---PO \"map=.*/WH_had.*:r_qqH[1,0,3]\" \
---PO \"map=.*/ZH_had.*:r_qqH[1,0,3]\" \
---PO \"map=.*/ggZH_had.*:r_ggH[1,0,2]\" \
---PO \"map=.*/WH_lep.*:r_WH_lep[1,0,5]\" \
---PO \"map=.*/ZH_lep.*:r_ZH_lep[1,0,5]\" \
---PO \"map=.*/ggZH_ll.*:r_ZH_lep[1,0,5]\" \
---PO \"map=.*/ggZH_nunu.*:r_ZH_lep[1,0,5]\" \
---PO \"map=.*/ttH.*:r_ttH[1,0,3]\" \
---PO \"map=.*/tHq.*:r_tH[1,0,15]\" \
---PO \"map=.*/tHW.*:r_tH[1,0,15]\"",
+  "mu_stage0":"-P HiggsAnalysis.CombinedLimit.PhysicsModel:multiSignalModel \
+--PO \"map=.*/ggH.*:r_ggH[1,0,2]\"" ,
+
 
   "stage1p2_maximal":"-P HiggsAnalysis.CombinedLimit.PhysicsModel:multiSignalModel \
 --PO \"map=.*/ggH_0J_PTH_0_10.*:r_ggH_0J_low[1,0,4]\" \
