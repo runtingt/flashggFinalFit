@@ -11,25 +11,5 @@
         "fits":["bestfit:syst:r1","bestfit:syst:r1"],
         "points":"1",
         "fit_opts":"--saveWorkspace --setParameterRanges r=0,2 --saveSpecifiedNuis all --freezeParameters MH"
-    },
-
-    "mu_STXS0":{
-        "pois":"r_gghtruth,r_tthtruth,r_thtruth,r_whltruth,r_zhltruth,r_vbftruth",
-        "fits":"profile1D:statonly:r_gghtruth,r_tthtruth,r_thtruth,r_whltruth,r_zhltruth,r_vbftruth",
-        "points":"40:40",
-        "fit_opts":"--saveInactivePOI 1 --setParameters r_gghtruth=1,r_tthtruth=1,r_thtruth=1,r_whltruth=1,r_zhltruth=1,r_vbftruth=1 --setParameterRanges r_gghtruth=0,3:r_tthtruth=0,3:r_thtruth=-4.5,7:r_whltruth=0,3:r_zhltruth=-8,8:r_vbftruth=0,3 --saveSpecifiedNuis all --freezeParameters MH,alpha,beta,gamma,delta,epsilon,jotta,kappa,lambda,omega,w"
-    },
-
-    "mu_gghtruth":{
-        "pois":"r_gghtruth",
-        "fits":"profile1D:syst:r_gghtruth",
-        "points":"400:40",
-        "fit_opts":"--saveInactivePOI 1 --setParameters r_gghtruth --setParameterRanges r_gghtruth=0,3 --saveSpecifiedNuis all --freezeParameters MH"
-    },
-    "mu_vbfvhqtruth":{
-        "pois":"r_vbfvhqtruth",
-        "fits":"profile1D:syst:r_vbfvhqtruth",
-        "points":"500:1",
-        "fit_opts":"--saveInactivePOI 1 --setParameters r_vbfvhqtruth --setParameterRanges r_vbfvhqtruth=0,3 --saveSpecifiedNuis all --freezeParameters MH"
     }
 }

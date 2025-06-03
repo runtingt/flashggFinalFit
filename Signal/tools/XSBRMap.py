@@ -44,6 +44,44 @@ globalXSBRMap['Run3STXS']['vhqtruth'] = {'mode':'constant', 'factor':1.64177455}
 globalXSBRMap['Run3STXS']['bbhtruth'] = {'mode':'constant', 'factor':0.5266}
 globalXSBRMap['Run3STXS']['ggzhtruth'] = {'mode':'constant', 'factor':0.020347999999999998}
 
+globalXSBRMap['Run3STXS0'] = od()
+globalXSBRMap['Run3STXS0']['decay'] = {'mode':'hgg'}
+globalXSBRMap['Run3STXS0']['GG2H__preEE'] = {'mode':'constant', 'factor':52.277759999999994}
+globalXSBRMap['Run3STXS0']['GG2H_FWDH_preEE'] = {'mode':'constant', 'factor':52.277759999999994}
+globalXSBRMap['Run3STXS0']['TTH__preEE'] = {'mode':'constant', 'factor':0.57}
+globalXSBRMap['Run3STXS0']['TTH_FWDH_preEE'] = {'mode':'constant', 'factor':0.57}
+globalXSBRMap['Run3STXS0']['THQ__preEE'] = {'mode':'constant', 'factor':0.086688}
+globalXSBRMap['Run3STXS0']['THQ_FWDH_preEE'] = {'mode':'constant', 'factor':0.086688}
+globalXSBRMap['Run3STXS0']['THW__preEE'] = {'mode':'constant', 'factor':0.0172}
+globalXSBRMap['Run3STXS0']['THW_FWDH_preEE'] = {'mode':'constant', 'factor':0.0172}
+globalXSBRMap['Run3STXS0']['WMINUSH2HQQ__preEE'] = {'mode':'constant', 'factor':0.38268657}
+globalXSBRMap['Run3STXS0']['WMINUSH2HQQ_FWDH_preEE'] = {'mode':'constant', 'factor':0.38268657}
+globalXSBRMap['Run3STXS0']['WMINUSH2HLNU__preEE'] = {'mode':'constant', 'factor':0.18495666}
+globalXSBRMap['Run3STXS0']['WMINUSH2HLNU_FWDH_preEE'] = {'mode':'constant', 'factor':0.18495666}
+globalXSBRMap['Run3STXS0']['WPLUSH2HQQ__preEE'] = {'mode':'constant', 'factor':0.5992074900000001}
+globalXSBRMap['Run3STXS0']['WPLUSH2HQQ__FWDH_preEE'] = {'mode':'constant', 'factor':0.5992074900000001}
+globalXSBRMap['Run3STXS0']['WPLUSH2HLNU__preEE'] = {'mode':'constant', 'factor':0.28960362}
+globalXSBRMap['Run3STXS0']['WPLUSH2HLNU_FWDH_preEE'] = {'mode':'constant', 'factor':0.28960362}
+globalXSBRMap['Run3STXS0']['ZH2HQQ__preEE'] = {'mode':'constant', 'factor':0.6598804899999999}
+globalXSBRMap['Run3STXS0']['ZH2HQQ_FWDH_preEE'] = {'mode':'constant', 'factor':0.6598804899999999}
+globalXSBRMap['Run3STXS0']['ZH2HLL__preEE'] = {'mode':'constant', 'factor': 0.0953093586}
+globalXSBRMap['Run3STXS0']['ZH2HLL_FWDH_preEE'] = {'mode':'constant', 'factor': 0.0953093586}
+globalXSBRMap['Run3STXS0']['ZH2HNUNU__preEE'] = {'mode':'constant', 'factor':0.1887}
+globalXSBRMap['Run3STXS0']['ZH2HNUNU_FWDH_preEE'] = {'mode':'constant', 'factor':0.1887}
+globalXSBRMap['Run3STXS0']['VBF__preEE'] = {'mode':'constant', 'factor':4.078}
+globalXSBRMap['Run3STXS0']['VBF_FWDH_preEE'] = {'mode':'constant', 'factor':4.078}
+globalXSBRMap['Run3STXS0']['BBH__preEE'] = {'mode':'constant', 'factor':0.5266}
+globalXSBRMap['Run3STXS0']['BBH_FWDH_preEE'] = {'mode':'constant', 'factor':0.5266}
+globalXSBRMap['Run3STXS0']['GG2HLL__preEE'] = {'mode':'constant', 'factor':0.006838}
+globalXSBRMap['Run3STXS0']['GG2HLL_FWDH_preEE'] = {'mode':'constant', 'factor':0.006838}
+globalXSBRMap['Run3STXS0']['GG2HNUNU__preEE'] = {'mode':'constant', 'factor':0.01351}
+globalXSBRMap['Run3STXS0']['GG2HNUNU_FWDH_preEE'] = {'mode':'constant', 'factor':0.01351}
+globalXSBRMap['Run3STXS0']['GG2HQQ__preEE'] = {'mode':'constant', 'factor':0.04776}
+globalXSBRMap['Run3STXS0']['GG2HQQ_FWDH_preEE'] = {'mode':'constant', 'factor':0.04776}
+
+
+
+
 globalXSBRMap['tutorial'] = od()
 globalXSBRMap['tutorial']['decay'] = {'mode':'hgg'}
 globalXSBRMap['tutorial']['GG2H'] = {'mode':'constant', 'factor':51.96}

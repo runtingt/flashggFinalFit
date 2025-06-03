@@ -1,8 +1,39 @@
 models = {
   "mu_inclusive":"",
 
-  "mu_STXS0":"-P HiggsAnalysis.CombinedLimit.PhysicsModel:multiSignalModel \
+  "mu_STXS":"-P HiggsAnalysis.CombinedLimit.PhysicsModel:multiSignalModel \
 --PO \"map=.*/gghtruth.*:r_gghtruth[1,0,3]\" --PO \"map=.*/tthtruth.*:r_tthtruth[1,0,3]\" --PO \"map=.*/thtruth.*:r_thtruth[1,0,3]\" --PO \"map=.*/whltruth.*:r_whltruth[1,0,3]\" --PO \"map=.*/zhltruth.*:r_zhltruth[1,0,3]\" --PO \"map=.*/vbftruth.*:r_vbftruth[1,0,3]\" --PO \"map=.*/vhqtruth.*:r_vbftruth[1,0,3]\" --PO \"map=.*/ggzhtruth.*:r_zhltruth[1,0,3]\" --PO \"map=.*/bbhtruth.*:r_gghtruth[1,0,3]\"",
+  
+  "mu_STXS0":"-P HiggsAnalysis.CombinedLimit.PhysicsModel:multiSignalModel \
+--PO \"map=.*/GG2H__preEE.*:r_gghtruth[1,0,3]\" \
+--PO \"map=.*/GG2H_FWDH_preEE.*:r_gghtruth[1,0,3]\" \
+--PO \"map=.*/TTH__preEE.*:r_tthtruth[1,0,3]\"  \
+--PO \"map=.*/TTH_FWDH_preEE.*:r_tthtruth[1,0,3]\"  \
+--PO \"map=.*/THQ__preEE.*:r_thtruth[1,0,3]\" \
+--PO \"map=.*/THW__preEE.*:r_thtruth[1,0,3]\" \
+--PO \"map=.*/WMINUSH2HLNU__preEE.*:r_whltruth[1,0,3]\" \
+--PO \"map=.*/WMINUSH2HLNU_FWDH_preEE.*:r_whltruth[1,0,3]\" \
+--PO \"map=.*/WPLUSH2HLNU__preEE.*:r_whltruth[1,0,3]\" \
+--PO \"map=.*/WPLUSH2HLNU_FWDH_preEE.*:r_whltruth[1,0,3]\" \
+--PO \"map=.*/ZH2HNUNU__preEE.*:r_zhltruth[1,0,3]\" \
+--PO \"map=.*/ZH2HNUNU_FWDH_preEE.*:r_zhltruth[1,0,3]\" \
+--PO \"map=.*/ZH2HLL__preEE.*:r_zhltruth[1,0,3]\" \
+--PO \"map=.*/ZH2HLL_FWDH_preEE.*:r_zhltruth[1,0,3]\" \
+--PO \"map=.*/ZH2HQQ__preEE.*:r_vbftruth[1,0,3]\" \
+--PO \"map=.*/ZH2HQQ_FWDH_preEE.*:r_vbftruth[1,0,3]\" \
+--PO \"map=.*/VBF__preEE.*:r_vbftruth[1,0,3]\" \
+--PO \"map=.*/VBF_FWDH_preEE.*:r_vbftruth[1,0,3]\" \
+--PO \"map=.*/WMINUSH2HQQ__preEE.*:r_vbftruth[1,0,3]\" \
+--PO \"map=.*/WMINUSH2HQQ_FWDH_preEE.*:r_vbftruth[1,0,3]\" \
+--PO \"map=.*/WPLUSH2HQQ__preEE.*:r_vbftruth[1,0,3]\" \
+--PO \"map=.*/WPLUSH2HQQ_FWDH_preEE.*:r_vbftruth[1,0,3]\" \
+--PO \"map=.*/GG2HLL__preEE.*:r_zhltruth[1,0,3]\" \
+--PO \"map=.*/GG2HLL_FWDH_preEE.*:r_zhltruth[1,0,3]\" \
+--PO \"map=.*/GG2HNUNU__preEE.*:r_zhltruth[1,0,3]\" \
+--PO \"map=.*/GG2HNUNU_FWDH_preEE.*:r_zhltruth[1,0,3]\" \
+--PO \"map=.*/GG2HQQ__preEE.*:r_gghtruth[1,0,3]\" \
+--PO \"map=.*/GG2HQQ_FWDH_preEE.*:r_gghtruth[1,0,3]\" \
+--PO \"map=.*/BBH__preEE.*:r_gghtruth[1,0,3]\"",
   
   "mu_gghtruth":"-P HiggsAnalysis.CombinedLimit.PhysicsModel:multiSignalModel \
 --PO \"map=.*/gghtruth.*:r_gghtruth[1,0,3]\"",

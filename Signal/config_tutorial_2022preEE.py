@@ -5,11 +5,11 @@ _year = '2022preEE'
 signalScriptCfg = {
   
   # Setup
-  'inputWSDir':'/eos/user/p/pkrueper/HiggsDNA_and_FinalFits_tutorial24/higgsdna_finalfits_tutorial_24/07_FinalFits/CMSSW_14_1_0_pre4/src/flashggFinalFit/Workspaces_11march/signal_2022preEE',
+  'inputWSDir':'/eos/user/p/pkrueper/HiggsDNA_and_FinalFits_tutorial24/higgsdna_finalfits_tutorial_24/07_FinalFits/CMSSW_14_1_0_pre4/src/flashggFinalFit/Workspaces_19may/signal',
   'procs':'auto', # if auto: inferred automatically from filenames
   'cats':'auto', # if auto: inferred automatically from (0) workspace
-  'ext':'tutorial_%s'%_year,
-  'analysis':"Run3STXS",#'tutorial', # To specify which replacement dataset mapping (defined in ./python/replacementMap.py)
+  'ext':'Run3STXS_%s'%_year,
+  'analysis':"Run3STXS0",#'tutorial', # To specify which replacement dataset mapping (defined in ./python/replacementMap.py)
   'year':'%s'%_year, # Use 'combined' if merging all years: not recommended
   'massPoints':'125',
 

@@ -89,8 +89,9 @@ for year in years:
 
     # Mapping to STXS definition here
     _procOriginal = proc
-    _proc = "%s_%s_%s"%(procToDatacardName(proc),year,decayMode)
-    _proc_s0 = procToData(proc.split("_")[0])
+    _proc = proc #"%s_%s_%s"%(procToDatacardName(proc),year,decayMode)
+    _proc_s0 = proc
+    print(proc)
 
     # Define category: add year tag if not merging
     if opt.mergeYears: _cat = opt.cat
@@ -99,6 +100,7 @@ for year in years:
     # Input flashgg ws 
     _inputWSFile = glob.glob("%s/*M%s*_%s.root"%(inputWSDirMap[year],opt.mass,proc))[0]
     _nominalDataName = "%s_%s_%s_%s"%(_proc_s0,opt.mass,sqrts__,opt.cat)
+    print(_nominalDataName)
 
     # If opt.skipZeroes check nominal yield if 0 then do not add
     skipProc = False
@@ -209,6 +211,7 @@ for ir,r in data[data['type']=='sig'].iterrows():
 
   # Open input WS file and extract workspace
   f_in = ROOT.TFile(r.inputWSFile)
+  print(r.inputWSFile)
   inputWS = f_in.Get(inputWSName__)
   # Extract nominal RooDataSet and yield
   rdata_nominal = inputWS.data(r.nominalDataName)
@@ -217,18 +220,21 @@ for ir,r in data[data['type']=='sig'].iterrows():
   contents = ""
   y, y_COWCorr = 0, 0
   sumw2 = 0
-  for i in range(0,rdata_nominal.numEntries()):
-    p = rdata_nominal.get(i)
-    w = rdata_nominal.weight()
-    y += w
-    sumw2 += w*w
-    # Extract contents from first event
-    if i == 0: contents = p.contentsString()
-    if not opt.skipCOWCorr:
-      f_COWCorr = p.getRealValue("centralObjectWeight") if "centralObjectWeight" in contents else 1.
-      f_NNLOPS = abs(p.getRealValue("NNLOPSweight")) if "NNLOPSweight" in contents else 1.
-      if f_COWCorr == 0: continue
-      else: y_COWCorr += w*(f_NNLOPS/f_COWCorr)
+  try:
+    for i in range(0,rdata_nominal.numEntries()):
+      p = rdata_nominal.get(i)
+      w = rdata_nominal.weight()
+      y += w
+      sumw2 += w*w
+      # Extract contents from first event
+      if i == 0: contents = p.contentsString()
+      if not opt.skipCOWCorr:
+        f_COWCorr = p.getRealValue("centralObjectWeight") if "centralObjectWeight" in contents else 1.
+        f_NNLOPS = abs(p.getRealValue("NNLOPSweight")) if "NNLOPSweight" in contents else 1.
+        if f_COWCorr == 0: continue
+        else: y_COWCorr += w*(f_NNLOPS/f_COWCorr)
+  except ReferenceError:
+    print(f"\n Proc {r.proc} in Cat {r['cat']} has no entries,  skipping\n" )
   data.at[ir,'nominal_yield'] = y
   data.at[ir,'sumw2'] = sumw2
   if not opt.skipCOWCorr: data.at[ir,'nominal_yield_COWCorr'] = y_COWCorr
