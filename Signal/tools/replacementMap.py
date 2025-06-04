@@ -23,6 +23,51 @@ globalReplacementMap["example"]["catRVMap"] = od()
 globalReplacementMap["example"]["catRVMap"]["Untagged_Tag0"] = "Untagged_Tag0"
 globalReplacementMap["example"]["catRVMap"]["VBF_Tag0"] = "VBF_Tag0"
 
+
+globalReplacementMap["Run3STXS"]=od()
+globalReplacementMap["Run3STXS"]["procWV"]= "gghtruth"
+globalReplacementMap["Run3STXS"]["catWV"]= "GGH_RECO"
+
+globalReplacementMap["Run3STXS"]["procRVMap"]=od()
+globalReplacementMap["Run3STXS"]["procRVMap"]["TTH_RECO"]= "tthtruth"
+globalReplacementMap["Run3STXS"]["procRVMap"]["GGH_RECO"]= "gghtruth"
+globalReplacementMap["Run3STXS"]["procRVMap"]["TH_RECO"]= "thtruth"
+globalReplacementMap["Run3STXS"]["procRVMap"]["VBF_VHQ_RECO"]= "vbftruth"
+globalReplacementMap["Run3STXS"]["procRVMap"]["WHleptonic_RECO"]= "whltruth"
+globalReplacementMap["Run3STXS"]["procRVMap"]["ZHleptonic_RECO"]= "zhltruth"
+
+globalReplacementMap["Run3STXS"]["catRVMap"]=od()
+globalReplacementMap["Run3STXS"]["catRVMap"]["TTH_RECO"]= "TTH_RECO"
+globalReplacementMap["Run3STXS"]["catRVMap"]["GGH_RECO"]= "GGH_RECO"
+globalReplacementMap["Run3STXS"]["catRVMap"]["TH_RECO"]= "TH_RECO"
+globalReplacementMap["Run3STXS"]["catRVMap"]["VBF_VHQ_RECO"]= "VBF_VHQ_RECO"
+globalReplacementMap["Run3STXS"]["catRVMap"]["WHleptonic_RECO"]= "WHleptonic_RECO"
+globalReplacementMap["Run3STXS"]["catRVMap"]["ZHleptonic_RECO"]= "ZHleptonic_RECO"
+
+
+
+globalReplacementMap["Run3STXS0"]=od()
+globalReplacementMap["Run3STXS0"]["procWV"]= "GG2H__preEE"
+globalReplacementMap["Run3STXS0"]["catWV"]= "GGH_RECO"
+
+globalReplacementMap["Run3STXS0"]["procRVMap"]=od()
+globalReplacementMap["Run3STXS0"]["procRVMap"]["TTH_RECO"]= "TTH__preEE"
+globalReplacementMap["Run3STXS0"]["procRVMap"]["GGH_RECO"]= "GG2H__preEE"
+globalReplacementMap["Run3STXS0"]["procRVMap"]["TH_RECO"]= "THQ__preEE"
+globalReplacementMap["Run3STXS0"]["procRVMap"]["VBF_VHQ_RECO"]= "VBF__preEE"
+globalReplacementMap["Run3STXS0"]["procRVMap"]["WHleptonic_RECO"]= "WMINUSH2HQQ__preEE"
+globalReplacementMap["Run3STXS0"]["procRVMap"]["ZHleptonic_RECO"]= "ZH2HQQ__preEE"
+
+globalReplacementMap["Run3STXS0"]["catRVMap"]=od()
+globalReplacementMap["Run3STXS0"]["catRVMap"]["TTH_RECO"]= "TTH_RECO"
+globalReplacementMap["Run3STXS0"]["catRVMap"]["GGH_RECO"]= "GGH_RECO"
+globalReplacementMap["Run3STXS0"]["catRVMap"]["TH_RECO"]= "TH_RECO"
+globalReplacementMap["Run3STXS0"]["catRVMap"]["VBF_VHQ_RECO"]= "VBF_VHQ_RECO"
+globalReplacementMap["Run3STXS0"]["catRVMap"]["WHleptonic_RECO"]= "WHleptonic_RECO"
+globalReplacementMap["Run3STXS0"]["catRVMap"]["ZHleptonic_RECO"]= "ZHleptonic_RECO"
+
+
+
 # Tutorial analysis
 globalReplacementMap['tutorial'] = od()
 # For WRONG VERTEX SCENARIO:

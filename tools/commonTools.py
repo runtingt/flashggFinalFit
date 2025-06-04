@@ -22,16 +22,26 @@ def extractWSFileNames( _inputWSDir ):
 
 def extractListOfProcs( _listOfWSFileNames ):
   procs = []
+  
   for fName in _listOfWSFileNames:
     p = fName.split("pythia8_")[1].split(".root")[0]
     if p not in procs: procs.append(p)
   return ",".join(procs)
 
 def extractListOfCats( _listOfWSFileNames ):
-  f0 = ROOT.TFile(_listOfWSFileNames[0]) 
+  print(_listOfWSFileNames)
+  f0 = ROOT.TFile(_listOfWSFileNames[4]) #Note: This was [0], but not good, if the first file has only 5 instead of 6 RECOS clearly it will miss some RECOs
+  print("A")
+  print(_listOfWSFileNames[1])
+  print(f0.ls())
   ws = f0.Get(inputWSName__)
+  print("B")
+  print(ws)
+  print(inputWSName__)
   allData = ws.allData()
   cats = []
+  print(allData)
+  print(len(allData))
   for d in allData:
     # Skip systematics shifts
     if "sigma" in d.GetName(): continue

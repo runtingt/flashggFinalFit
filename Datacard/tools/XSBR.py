@@ -28,6 +28,14 @@ XSBRMap['tutorial']['decay'] = {'mode':'hgg'}
 XSBRMap['tutorial']['GG2H'] = {'mode':'constant', 'factor':51.96}
 XSBRMap['tutorial']['VBF'] = {'mode':'constant', 'factor':4.067}
 
+XSBRMap['Run3STXS'] = od()
+XSBRMap['Run3STXS']['decay'] = {'mode':'hgg'}
+XSBRMap['Run3STXS']['gghtruth'] = {'mode':'constant', 'factor':52.23}
+XSBRMap['Run3STXS']['tthtruth'] = {'mode':'constant', 'factor':0.5700}
+XSBRMap['Run3STXS']['thtruth'] = {'mode':'constant', 'factor':0.104}
+XSBRMap['Run3STXS']['whltruth'] = {'mode':'constant', 'factor':1.4564}
+XSBRMap['Run3STXS']['zhltruth'] = {'mode':'constant', 'factor':0.94388}
+XSBRMap['Run3STXS']['vbfVhqtruth'] = {'mode':'constant', 'factor':4.078}
 # STXS analysis
 XSBRMap['STXS'] = od()
 XSBRMap['STXS']['decay'] = {'mode':'hgg'}
@@ -144,6 +152,43 @@ XSBRMap['STXS']['THQ'] = {'mode':'tHq','factor':0.9721}
 XSBRMap['STXS']['THW_FWDH'] = {'mode':'tHW','factor':0.0106}
 XSBRMap['STXS']['THW'] = {'mode':'tHW','factor':0.9894}
 
+XSBRMap['Run3STXS'] = od()
+XSBRMap['Run3STXS']['decay'] = {'mode':'hgg'}
+XSBRMap['Run3STXS']['GG2H__preEE'] = {'mode':'constant', 'factor':52.277759999999994}
+XSBRMap['Run3STXS']['GG2H_FWDH_preEE'] = {'mode':'constant', 'factor':52.277759999999994}
+XSBRMap['Run3STXS']['TTH__preEE'] = {'mode':'constant', 'factor':0.57}
+XSBRMap['Run3STXS']['TTH_FWDH_preEE'] = {'mode':'constant', 'factor':0.57}
+XSBRMap['Run3STXS']['THQ__preEE'] = {'mode':'constant', 'factor':0.086688}
+XSBRMap['Run3STXS']['THQ_FWDH_preEE'] = {'mode':'constant', 'factor':0.086688}
+XSBRMap['Run3STXS']['THW__preEE'] = {'mode':'constant', 'factor':0.0172}
+XSBRMap['Run3STXS']['THW_FWDH_preEE'] = {'mode':'constant', 'factor':0.0172}
+XSBRMap['Run3STXS']['WMINUSH2HQQ__preEE'] = {'mode':'constant', 'factor':0.38268657}
+XSBRMap['Run3STXS']['WMINUSH2HQQ_FWDH_preEE'] = {'mode':'constant', 'factor':0.38268657}
+XSBRMap['Run3STXS']['WMINUSH2HLNU__preEE'] = {'mode':'constant', 'factor':0.18495666}
+XSBRMap['Run3STXS']['WMINUSH2HLNU_FWDH_preEE'] = {'mode':'constant', 'factor':0.18495666}
+XSBRMap['Run3STXS']['WPLUSH2HQQ__preEE'] = {'mode':'constant', 'factor':0.5992074900000001}
+XSBRMap['Run3STXS']['WPLUSH2HQQ__FWDH_preEE'] = {'mode':'constant', 'factor':0.5992074900000001}
+XSBRMap['Run3STXS']['WPLUSH2HLNU__preEE'] = {'mode':'constant', 'factor':0.28960362}
+XSBRMap['Run3STXS']['WPLUSH2HLNU_FWDH_preEE'] = {'mode':'constant', 'factor':0.28960362}
+XSBRMap['Run3STXS']['ZH2HQQ__preEE'] = {'mode':'constant', 'factor':0.6598804899999999}
+XSBRMap['Run3STXS']['ZH2HQQ_FWDH_preEE'] = {'mode':'constant', 'factor':0.6598804899999999}
+XSBRMap['Run3STXS']['ZH2HLL__preEE'] = {'mode':'constant', 'factor': 0.0953093586}
+XSBRMap['Run3STXS']['ZH2HLL_FWDH_preEE'] = {'mode':'constant', 'factor': 0.0953093586}
+XSBRMap['Run3STXS']['ZH2HNUNU__preEE'] = {'mode':'constant', 'factor':0.1887}
+XSBRMap['Run3STXS']['ZH2HNUNU_FWDH_preEE'] = {'mode':'constant', 'factor':0.1887}
+XSBRMap['Run3STXS']['VBF__preEE'] = {'mode':'constant', 'factor':4.078}
+XSBRMap['Run3STXS']['VBF_FWDH_preEE'] = {'mode':'constant', 'factor':4.078}
+XSBRMap['Run3STXS']['BBH__preEE'] = {'mode':'constant', 'factor':0.5266}
+XSBRMap['Run3STXS']['BBH_FWDH_preEE'] = {'mode':'constant', 'factor':0.5266}
+XSBRMap['Run3STXS']['GG2HLL__preEE'] = {'mode':'constant', 'factor':0.006838}
+XSBRMap['Run3STXS']['GG2HLL_FWDH_preEE'] = {'mode':'constant', 'factor':0.006838}
+XSBRMap['Run3STXS']['GG2HNUNU__preEE'] = {'mode':'constant', 'factor':0.01351}
+XSBRMap['Run3STXS']['GG2HNUNU_FWDH_preEE'] = {'mode':'constant', 'factor':0.01351}
+XSBRMap['Run3STXS']['GG2HQQ__preEE'] = {'mode':'constant', 'factor':0.04776}
+XSBRMap['Run3STXS']['GG2HQQ_FWDH_preEE'] = {'mode':'constant', 'factor':0.04776}
+
+
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Functions for loading XS*BR below
 # Importing modules from combine
@@ -204,6 +249,10 @@ def extractXSBR(d,mass='125',analysis='STXS'):
   XSBR_for_analysis = od()
   # XS
   for proc in d[d['type']=='sig']['procOriginal'].unique():
+    print(proc)
+    print(analysis)
+    print(XSBRMap[analysis])
+    print(XSBRMap[analysis][proc])
     fp = XSBRMap[analysis][proc]['factor'] if 'factor' in XSBRMap[analysis][proc] else 1.
     mode = XSBRMap[analysis][proc]['mode']
     xs = fp*xsbr[mode]
