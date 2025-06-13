@@ -18,11 +18,13 @@ def writePreamble(_file):
   _file.write("cd %s\n"%swd__)
   _file.write("export PYTHONPATH=$PYTHONPATH:%s/tools:%s/tools\n\n"%(cwd__,swd__))
 
-def writeCondorSub(_file,_exec,_queue,_nJobs,_jobOpts,doHoldOnFailure=True,doPeriodicRetry=True):
+def writeCondorSub(_file,_exec,_queue,_nJobs,_jobOpts,doHoldOnFailure=True,doPeriodicRetry=True,dir="fTest"):
   _file.write("executable = %s.sh\n"%_exec)
   _file.write("arguments  = $(ProcId)\n")
-  _file.write("output     = %s.$(ClusterId).$(ProcId).out\n"%_exec)
-  _file.write("error      = %s.$(ClusterId).$(ProcId).err\n\n"%_exec)
+  _file.write(f"output     = /eos/user/p/pkrueper/HiggsDNA_and_FinalFits_tutorial24/higgsdna_finalfits_tutorial_24/07_FinalFits/CMSSW_14_1_0_pre4/src/flashggFinalFit/Signal/outdir_tutorial_2022preEE/fTest/jobs/%s.$(ClusterId).$(ProcId).out\n"%_exec)
+  _file.write(f"error      = /eos/user/p/pkrueper/HiggsDNA_and_FinalFits_tutorial24/higgsdna_finalfits_tutorial_24/07_FinalFits/CMSSW_14_1_0_pre4/src/flashggFinalFit/Signal/outdir_tutorial_2022preEE/fTest/jobs/%s.$(ClusterId).$(ProcId).err\n\n"%_exec)
+  _file.write(f"output_destination = /eos/user/p/pkrueper/HiggsDNA_and_FinalFits_tutorial24/higgsdna_finalfits_tutorial_24/07_FinalFits/CMSSW_14_1_0_pre4/src/flashggFinalFit/Signal/outdir_tutorial_2022preEE/{dir}")
+  _file.write("transfer_output_files = \"\"")
   if _jobOpts != '':
     _file.write("# User specified job options\n")
     for jo in _jobOpts.split(":"): _file.write("%s\n"%jo)
@@ -106,9 +108,9 @@ def writeSubFiles(_opts):
     # Condor submission file
     _fsub = open("%s/%s.sub"%(_jobdir,_executable),"w")
     if _opts['mode'] == "signalFit": 
-      if( not _opts['groupSignalFitJobsByCat'] ): writeCondorSub(_fsub,_executable,_opts['queue'],_opts['nCats']*_opts['nProcs'],_opts['jobOpts'])
-      else: writeCondorSub(_fsub,_executable,_opts['queue'],_opts['nCats'],_opts['jobOpts'])
-    elif( _opts['mode'] == "calcPhotonSyst" )|( _opts['mode'] == "fTest" )|( _opts['mode'] == "packageSignal" ): writeCondorSub(_fsub,_executable,_opts['queue'],_opts['nCats'],_opts['jobOpts'])
+      if( not _opts['groupSignalFitJobsByCat'] ): writeCondorSub(_fsub,_executable,_opts['queue'],_opts['nCats']*_opts['nProcs'],_opts['jobOpts'],dir="signalFit")
+      else: writeCondorSub(_fsub,_executable,_opts['queue'],_opts['nCats'],_opts['jobOpts'],dir="signalFit")
+    elif( _opts['mode'] == "calcPhotonSyst" )|( _opts['mode'] == "fTest" )|( _opts['mode'] == "packageSignal" ): writeCondorSub(_fsub,_executable,_opts['queue'],_opts['nCats'],_opts['jobOpts'],dir="fTest")
     _fsub.close()
     
   # SGE...
