@@ -7,15 +7,6 @@ micromamba create -f environment.yaml
 micromamba activate flashggFinalFit
 ```
 
-> [!IMPORTANT]
-> This environment requires the `boost-cpp` package, which (at the time of writing) forces the use of an older version of `combine` (v10.0.2). This ships with an older version of `root_base` (v6.32.10), which contains a typo in the `ScalarWrapper.h` header from `root-project/VecCore` ([see here](https://github.com/root-project/veccore/commit/247b9c6bd48a26b298a73683bb6015b08829ca70)). As a temporary fix, run
->
-> ```bash
-> sed -i 's/fVal(s->val_ptr)/fVal(s->fVal)/' $CONDA_PREFIX/include/VecCore/Backend/ScalarWrapper.h
-> ```
->
-> after activating the environment to patch the header file.
-
 ## Setup FinalFits
 
 ```bash

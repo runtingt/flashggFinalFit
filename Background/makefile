@@ -22,9 +22,9 @@ endif
 ifeq ($(UNAME),Linux)
 $(info Found OS Linux - using linux build)
 # BOOST_PATH=$(shell scram tool info boost | awk -F= '/BOOST_BASE/ {  print $$2  }')
-USERINCLUDES += -I$(BOOST_PATH)/include/
+# USERINCLUDES += -I$(BOOST_PATH)/include/
 USERINCLUDES += -I $(CMSSW_BASE)/src/ -I $(CMSSW_RELEASE_BASE)/src/
-USERLIBS += -L$(BOOST_PATH)/lib/ -lboost_regex -lboost_program_options 
+USERLIBS += -lboost_regex -lboost_program_options 
 USERINCLUDES += -I$(ROOFITSYS)/include
 USERLIBS += -L$(ROOFITSYS)/lib -lRooFit -lRooFitCore -lRooStats
 USERLIBS += -L$(CMSSW_BASE)/lib 

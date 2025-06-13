@@ -6,7 +6,7 @@ dependencies:
   - python=3.10
   - root_base
   - cms-combine
-  - boost-cpp
+  - libboost-headers
   - scipy
   - mkl
   - uproot
