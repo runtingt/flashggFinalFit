@@ -944,13 +944,7 @@ int main(int argc, char* argv[]){
 		choices_envelope_vec.push_back(choices_envelope);
 		pdfs_vec.push_back(pdfs);
 
-		if ((!bkgPdf)||((*funcType=="PowerLaw")&&(order>1))){
-					// assume this order is not allowed
-					continue;
-				}
-    else {
     plot(mass,pdfs,data,Form("%s/truths_cat%d",outDir.c_str(),(cat+catOffset)),flashggCats_,cat);
-    }
 
 		if (saveMultiPdf){
 
