@@ -57,6 +57,7 @@ TEST_EXT=cpp
 
 ROOT_DICT=RootDict.cxx
 ROOT_OBJ=$(subst .cxx,.$(OBJ_EXT),$(ROOT_DICT))
+ROOT_PCM=$(subst .cxx,_rdict.pcm,$(ROOT_DICT))
 SRCS=$(wildcard $(BASEDIR)/src/*.cc)
 EXES=$(wildcard $(BASEDIR)/test/*.cpp)
 HEADERS=$(wildcard $(BASEDIR)/interface/*.h)
@@ -77,9 +78,9 @@ $(LIBDIR)/lib$(LIBNAME).so: $(OBJS) $(ROOT_OBJ)
 	@echo Building shared library $@
 	@$(LD) $(LDFLAGS) -o $(LIBDIR)/lib$(LIBNAME).so $^ $(LIBS)
 	
-$(ROOT_DICT): $(SRCS) $(HEADERS)
+$(ROOT_DICT) $(ROOT_OBJ) $(ROOT_PCM): $(SRCS) $(HEADERS)
 	@echo Making dictionary $@
-	@rootcling -f $@ -c $(INCLUDE) $(HEADERS)
+	@rootcling -f $(ROOT_DICT) -c $(INCLUDE) $(HEADERS)
 	@$(CXX) $(CXXFLAGS) -fPIC -c $(ROOT_DICT) -o $(ROOT_OBJ)
 
 
@@ -101,4 +102,4 @@ clean:
 	@echo "  " $(LIBDIR)/lib$(LIBNAME).so
 	@echo "  " $(BINS)
 	@echo "  " $(ROOT_DICT)
-	@rm -rf $(OBJS) $(LIBDIR)/lib$(LIBNAME).so $(BINS) $(ROOT_DICT)
+	@rm -rf $(OBJS) $(LIBDIR)/lib$(LIBNAME).so $(BINS) $(ROOT_DICT) $(ROOT_OBJ) $(ROOT_PCM)
