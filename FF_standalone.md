@@ -1,11 +1,6 @@
 # FinalFits standalone setup instructions
 
-## Install the environment
 
-```bash
-micromamba create -f environment.yaml
-micromamba activate flashggFinalFit
-```
 
 ## Setup FinalFits
 
@@ -18,6 +13,13 @@ cd flashggFinalFit
 source setup_standalone.sh
 ```
 
+## Install the environment
+
+```bash
+micromamba create -f environment.yaml
+micromamba activate flashggFinalFit
+```
+
 ## Build the Background modelling code
 
 ```bash
@@ -27,7 +29,7 @@ make -j 8
 cd -
 ```
 
-## Download data from the lhc-hxswg (optional, needed for the tutorial's physics model)
+## Download data from the lhc-hxswg (NOT optional, needed for the tutorial's physics model)
 
 ```bash
 mkdir -p $CMSSW_BASE/src/HiggsAnalysis/CombinedLimit/data/lhc-hxswg

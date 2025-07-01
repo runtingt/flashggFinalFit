@@ -828,7 +828,7 @@ int main(int argc, char* argv[]){
 			while (prob<0.05 && order < 7){ 
         //FIXME
 				RooAbsPdf *bkgPdf = getPdf(pdfsModel,*funcType,order,Form("ftest_pdf_%d_%s",(cat+catOffset),ext.c_str()));
-				if ((!bkgPdf)||((*funcType=="PowerLaw")&&(order>1))){
+				if ((!bkgPdf)){
 					// assume this order is not allowed
 					order++;
 				}
